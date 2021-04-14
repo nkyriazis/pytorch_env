@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  pytorch:
+    container_name: pytorch
+    build: env
+    runtime: nvidia
+    shm_size: 12G
+    volumes:
+      - ${MOUNT}:/share
+    command: tail -F anything
