@@ -4,7 +4,7 @@ services:
     container_name: pytorch
     build: env
     runtime: nvidia
-    shm_size: 12G
+    shm_size: 32G
     volumes:
       - ${MOUNT}:/share
     command: tail -F anything
